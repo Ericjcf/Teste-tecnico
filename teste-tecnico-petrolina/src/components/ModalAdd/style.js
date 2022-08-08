@@ -1,13 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  position: absolute;
+  background-color: var(--grey-3);
+  border: 3px solid #ffff;
+  border-radius: 3px;
+  margin: auto;
+  width: 400px;
+  height: 600px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding: 0 38px;
+  padding: 0 20px;
 `;
 export const ContainerHeader = styled.header`
+  background-color: var(--grey-3);
   margin-top: 10px;
   border-radius: 5px;
   display: flex;
@@ -16,10 +23,6 @@ export const ContainerHeader = styled.header`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 70px;
-  h2 {
-    color: var(--pink-primary);
-  }
 `;
 
 export const InputContainer = styled.form`
@@ -28,6 +31,8 @@ export const InputContainer = styled.form`
   padding: 0 38px;
   section {
     display: flex;
+    /* aqui indica que a div é filha direta da section */
+    /* neste caso ele cuida da parte onde inserimos a atividade */
     > div {
       max-width: 88%;
       flex: 1;
@@ -42,39 +47,14 @@ export const InputContainer = styled.form`
 `;
 
 export const TecnologiasContainer = styled.div`
-  margin-top: 10px;
-  border-radius: 5px;
+  padding: 0 38px;
+  margin-top: 32px;
   display: flex;
-  padding: 20px;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 70px;
+  flex-wrap: wrap;
 
   div {
-    border-radius: 5px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 1rem;
+    margin-top: 16px;
     margin-right: 32px;
-  }
-`;
-export const TecnologiasContainerLista = styled.div`
-  background-color: var(--grey-3);
-  margin-top: 10px;
-  border-radius: 5px;
-  display: flex;
-  padding: 20px;
-  flex-direction: column;
-  align-items: left;
-  justify-content: space-between;
-  width: 100%;
-  li {
-    text-align: center;
-    width: 100%;
   }
 `;
 
@@ -88,12 +68,27 @@ export const ContainerForm = styled.form`
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  h1 {
-    margin-bottom: 2rem;
+  h1, h2 {
+    margin-bottom: 0.5rem;
   }
   span {
     margin-bottom: 2rem;
-    font-size: 1rem;
+    font-size: 12px;
     color: var(--grey-1);
+  }
+  button {
+    margin-top: 20px;
+  }
+  select {
+    background: var(--grey-0);
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+    
+
+    padding: 5px;
+    display: flex;
+    width: 100%;
+    height: 50px;
   }
 `;
